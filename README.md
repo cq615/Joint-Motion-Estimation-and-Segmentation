@@ -18,3 +18,8 @@ model ==> Model parameters
 test ==> One test sample
 
 PyTorch implementation is under construction.
+
+# Citation and Acknowledgement
+If you use the code for your work, or if you found the code useful, please cite the following works.
+
+Qin, C., Bai, W., Schlemper, J., Petersen, S.E., Piechnik, S.K., Neubauer, S. and Rueckert, D. Joint learning of motion estimation and segmentation for cardiac MR image sequences. In International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2018.
