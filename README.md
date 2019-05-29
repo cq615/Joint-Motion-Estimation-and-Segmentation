@@ -20,6 +20,8 @@ test ==> One test sample
 PyTorch implementation is under construction.
 
 # Citation and Acknowledgement
-If you use the code for your work, or if you found the code useful, please cite the following works.
+If you use the code for your work, or if you found the code useful, please cite the following works:
 
 Qin, C., Bai, W., Schlemper, J., Petersen, S.E., Piechnik, S.K., Neubauer, S. and Rueckert, D. Joint learning of motion estimation and segmentation for cardiac MR image sequences. In International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2018.
+
+C. Qin, W. Bai, J. Schlemper, S. Petersen, S. Piechnik, S. Neubauer and D. Rueckert. Joint Motion Estimation and Segmentation from Undersampled Cardiac MR Image. International Workshop on Machine Learning for Medical Image Reconstruction, 2018: 55-63.
