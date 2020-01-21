@@ -96,7 +96,7 @@ def train(epoch):
         x_gndc = Variable(x_gnd.type(torch.cuda.LongTensor))
 
         optimizer.zero_grad()
-        net = model(x_c, x_predc, x_predc)
+        net = model(x_c, x_predc, x_c)
         flow_loss = flow_criterion(net['fr_st'], x_predc) + 0.01 * huber_loss(net['out'])
         seg_loss = seg_criterion(net['outs_softmax'], x_gndc)
         loss = flow_loss + 0.01 * seg_loss
