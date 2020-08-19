@@ -2,7 +2,7 @@
 
 Code accompanying MICCAI 2018 paper of the same title. Paper link: https://arxiv.org/abs/1806.04066
 
-
+![](joint_model.png)
 
 ## Usage
 
