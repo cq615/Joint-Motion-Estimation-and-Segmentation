@@ -22,7 +22,7 @@ class TrainDataset(data.Dataset):
 
         # load the nifti images
 
-        input, target = load_UKBB_data_3d(self.data_path, self.filename[index], size = 192)
+        input, target = load_data_3d(self.data_path, self.filename[index], size = 192)
 
         if self.transform:
             input, target = self.transform(input, target)
@@ -52,7 +52,7 @@ class TestDataset(data.Dataset):
 
         # load the nifti images
 
-        input, target, dx = load_UKBB_test_data(self.data_path, self.filename[index], self.frame, size = 192)
+        input, target, dx = load_test_data(self.data_path, self.filename[index], self.frame, size = 192)
 
         if self.transform:
             input, target = self.transform(input, target)
@@ -78,8 +78,8 @@ class TestDataset_flow(data.Dataset):
 
         # load the nifti images
 
-        input_ed, target_ed, dx = load_UKBB_test_data(self.data_path, self.filename[index], 'ED', size=192)
-        input_es, target_es, dx = load_UKBB_test_data(self.data_path, self.filename[index], 'ES', size=192)
+        input_ed, target_ed, dx = load_test_data(self.data_path, self.filename[index], 'ED', size=192)
+        input_es, target_es, dx = load_test_data(self.data_path, self.filename[index], 'ES', size=192)
 
         # if self.transform:
         #     input, target = self.transform(input, target)

@@ -27,10 +27,11 @@ def crop_and_fill_test(img,size):
     return img_new
 
 
-def load_UKBB_data_3d(data_path, filename, size):
+def load_data_3d(data_path, filename, size):
     # Load images and labels, save them into a hdf5 file
     nim = nib.load(os.path.join(data_path, filename, 'sa.nii.gz'))
     image = nim.get_data()[:, :, :, :]
+    image = np.array(image, dtype='float32')
 
     # generate random index for t and z dimension
     rand_t = np.random.randint(0,image.shape[3])
@@ -47,6 +48,7 @@ def load_UKBB_data_3d(data_path, filename, size):
 
     nim = nib.load(os.path.join(data_path, filename, 'sa_'+frame+'.nii.gz'))
     image = nim.get_data()[:, :, :]
+    image = np.array(image, dtype='float32')
 
     nim_seg = nib.load(os.path.join(data_path, filename, 'label_sa_'+frame+'.nii.gz'))
     seg = nim_seg.get_data()[:, :, :]
@@ -109,7 +111,7 @@ def load_dataset(filename):
     return image, label
 
 
-def load_UKBB_test_data(data_path, filename, frame, size):
+def load_test_data(data_path, filename, frame, size):
     nim = nib.load(os.path.join(data_path, filename, 'sa.nii.gz'))
     image = nim.get_data()[:, :, :, :]
     dx = nim.header.get_zooms()
